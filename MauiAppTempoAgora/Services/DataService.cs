@@ -9,7 +9,10 @@ namespace MauiAppTempoAgora.Services
         {
             Tempo? tempo = null;
 
+            // Chave obtida no site https://openweathermap.org/api
             string chave = "0b75a33670200fcba1b8ce7cf9b49850";
+
+            // Monta a URL para requisição
             string url = $"https://api.openweathermap.org/data/2.5/weather?q={cidade}&units=metric&appid={chave}";
 
             using (HttpClient client = new HttpClient())
